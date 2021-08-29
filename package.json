@@ -1,0 +1,77 @@
+{
+  "name": "aws.locationservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "next": "^11.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.5",
+    "@types/react": "^17.0.19",
+    "@types/react-dom": "^17.0.9",
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@typescript-eslint/parser": "^4.29.3",
+    "eslint": "^7.32.0",
+    "husky": "^7.0.2",
+    "jest": "^27.1.0",
+    "lint-staged": "^11.1.2",
+    "node-sass": "^6.0.1",
+    "prettier": "^2.3.2",
+    "ts-jest": "^27.0.5",
+    "ts-node": "^10.2.1",
+    "ts-node-dev": "^1.1.8",
+    "tsc-watch": "^4.5.0",
+    "typescript": "^4.3.4"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "ts-node": "ts-node",
+    "ts-node-dev": "ts-node-dev",
+    "ts-node-start": "ts-node --project ./tsconfig.node.json src/ts-node/index.ts",
+    "ts-node-start-dev": "ts-node-dev --project ./tsconfig.node.json src/ts-node/index.ts --respawn",
+    "ts-node-watch": "tsc-watch --onSuccess \"npm start-ts-node\"",
+    "next": "next",
+    "next-build": "next build && next export -o public.next",
+    "next-start": "next start -p 4000",
+    "next-start-dev": "next -p 4000",
+    "build": "npm run next-build",
+    "start" : "npm run next-start",
+    "start-dev": "npm run next-start-dev",
+    "test": "jest --passWithNoTests",
+    "precommit": "npm test",
+    "formatter": "prettier --write '*/**'",
+    "linter": "eslint --fix src/**/*.{js,ts,jsx,tsx}",
+    "check": "eslint --fix src/**/*.{js,ts,jsx,tsx} && prettier --write '*/**'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "precommit"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix --max-warnings=0",
+      "git add"
+    ],
+    "*/**": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CQYaDoKaRi/aws.locationservice.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CQYaDoKaRi/aws.locationservice/issues"
+  },
+  "homepage": "https://github.com/CQYaDoKaRi/aws.locationservice#readme"
+}

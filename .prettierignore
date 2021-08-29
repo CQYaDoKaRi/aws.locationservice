@@ -1,0 +1,13 @@
+# フォルダー
+node_modules
+.husky
+.next
+public
+public.next
+
+# ファイル
+.gitignore
+.prettierrc.js
+README.md
+package.json
+package-lock.json
